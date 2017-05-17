@@ -1,7 +1,8 @@
 # wikiSearchEngine
 
-- Installer elasticsearch    
-apt-get install elasticsearch
+- Installer elasticsearch et esbulk    
+apt-get install elasticsearch    
+https://github.com/miku/esbulk/releases/download/v0.4.2/esbulk_0.4.2_amd64.deb
 - Lancer elasticsearch    
 elasticsearch
 - Ajout du fichier obtenu après exécution de l'algo java à l’index ES    
@@ -12,10 +13,10 @@ npm install
 - Lancer le serveur nodejs (le service elasticsearch doit être lancé en arrière-plan)    
 node index.js
 
--URL du site    
+- URL du site    
 localhost:3000/
 ______________________
 Commandes supplémentaires
 
-Suppression de l’index ES
+Suppression de l’index ES    
 curl -XDELETE 'http://localhost:9200/wiki/'
