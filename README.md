@@ -1,15 +1,18 @@
 # wikiSearchEngine
 
-- Lancer elasticsearch
-- Ajout du fichier obtenu après exécution de l'algo java à l’index ES
+- Installer elasticsearch    
+apt-get install elasticsearch
+- Lancer elasticsearch    
+elasticsearch
+- Ajout du fichier obtenu après exécution de l'algo java à l’index ES    
 esbulk -index wiki -type page -verbose part-r-00000.json
 - Se mettre a la racine du projet git
-- Installer les dépendances :
+- Installer les dépendances    
 npm install
-- Lancer le serveur nodejs (le service elasticsearch doit être lancé en arrière-plan) :
+- Lancer le serveur nodejs (le service elasticsearch doit être lancé en arrière-plan)    
 node index.js
 
--URL du site
+-URL du site    
 localhost:3000/
 ______________________
 Commandes supplémentaires
