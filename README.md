@@ -1,7 +1,7 @@
 # wikiSearchEngine
 
 - Installer elasticsearch et esbulk (/!\ fix necessaire sous 16.04, ref doc ubuntu)    
-https://doc.ubuntu-fr.org/elasticsearch
+https://doc.ubuntu-fr.org/elasticsearch    
 https://github.com/miku/esbulk/releases/download/v0.4.2/esbulk_0.4.2_amd64.deb
 - Lancer elasticsearch (14.04 uniquement)    
 elasticsearch
