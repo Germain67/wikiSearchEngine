@@ -36,11 +36,12 @@ app.post('/search', function (req, res) {
     index: 'wiki',
     type: 'page',
     body: {
-      query: {
-        match: {
-          name: queryString
+      "query": {
+        "function_score": {
+            "query": { "match":{"name":queryString} },
+            "field_value_factor": { "field":"pagerank","modifier": "log1p","factor": 2}
         }
-      }
+    }
     }
   }).then(function (resp) {
       hits = resp.hits.hits;
