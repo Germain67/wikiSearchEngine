@@ -21,7 +21,7 @@
     <h1>Wikipedia search engine</h1>
     <ul>
       <% results.forEach(function(res) { %>
-        <li><a href="https://fr.wikipedia.org/<%= res._source.name %>"> <%= res._source.name %> </a> - <%= res._source.pagerank %> </li>
+        <li><a href="https://fr.wikipedia.org/wiki/<%= res._source.name %>"> <%= res._source.name %> </a> - <%= res._source.pagerank %> </li>
       <% }); %>
     </ul>
 
