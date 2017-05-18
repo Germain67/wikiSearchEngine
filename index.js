@@ -25,7 +25,7 @@ client.ping({
 
 //Routes
 app.get('/' , function (req, res) {
-  res.render('index.html');
+  res.render('index.html', {searchTerm : ''});
 })
 
 app.post('/search', function (req, res) {
@@ -45,16 +45,13 @@ app.post('/search', function (req, res) {
     }
   }).then(function (resp) {
       hits = resp.hits.hits;
-      res.render('results.html', { results : hits});
+      res.render('index.html', { searchTerm : queryString, results : hits});
       //res.send(hits);
   }, function (err) {
       console.trace(err.message);
       res.send(err.message);
   });
 });
-app.get('/' , function (req, res) {
-  res.render('index.html');
-})
 
 //HTTP server
 app.listen(3000, function () {
