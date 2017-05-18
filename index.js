@@ -28,8 +28,8 @@ app.get('/' , function (req, res) {
   res.render('index.html', {searchTerm : ''});
 })
 
-app.post('/search', function (req, res) {
-  var queryString = req.body.queryString;
+app.get('/search', function (req, res) {
+  var queryString = req.query.q;
   console.log('Received query : ' + queryString);
   var hits = {};
   client.search({

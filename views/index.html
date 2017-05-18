@@ -19,10 +19,10 @@
   </head>
   <body>
     <h1>Wikipedia search engine</h1>
-    <form action="/search" method="post">
+    <form action="/search" method="get">
       <div class="form-group">
         <label for="query">Search</label>
-        <input type="text" class="form-control" value="<%= searchTerm %>" name="queryString" id="queryString" placeholder="Search query">
+        <input type="text" class="form-control" value="<%= searchTerm %>" name="q" id="q" placeholder="Search query">
       </div>
       <button type="submit" class="btn btn-default">Run search</button>
     </form>
