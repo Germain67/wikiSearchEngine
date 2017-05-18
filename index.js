@@ -39,7 +39,7 @@ app.post('/search', function (req, res) {
       "query": {
         "function_score": {
             "query": { "match":{"name":queryString} },
-            "field_value_factor": { "field":"pagerank","modifier": "log1p","factor": 2}
+            "field_value_factor": { "field":"pagerank","modifier": "log1p"}
         }
     }
     }
